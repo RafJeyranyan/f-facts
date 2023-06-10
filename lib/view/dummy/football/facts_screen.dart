@@ -15,7 +15,7 @@ class InterestingFactsScreen extends StatelessWidget {
       backgroundColor: AppColors.greenBackGround,
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Интересные факты",style: TextStyle(fontSize: 20,color: Colors.black),),
+        title: Text("Interesting facts",style: TextStyle(fontSize: 20,color: Colors.black),),
         leading: BackButton(color: Colors.black,),
         backgroundColor: AppColors.greenBackGround,
 

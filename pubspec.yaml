@@ -43,7 +43,6 @@ dependencies:
   connectivity_plus: ^3.0.2
   device_info_plus: ^8.1.0
   firebase_remote_config: ^4.2.2
-  google_fonts: ^5.0.0
 
 
 
