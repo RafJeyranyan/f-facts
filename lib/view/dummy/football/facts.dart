@@ -36,6 +36,16 @@ const List<String> facts = [
       "A football’s shape and size has not been changed, "
       "it still has a circumference of 28 inches.",
 
+  "In every game, a football player runs an average of 9.65 km (5.9 miles)",
+
+  "Brazil is the only team to have played in every single World Cup tournament.",
+
+  "The first official Women’s football tournament took place in 1991.",
+
+  "Neil Armstrong wanted to take a football to the moon, but NASA refused it.",
+
+  "The first game of Basketball was played with a foot ball.",
+
 
 
 ];
