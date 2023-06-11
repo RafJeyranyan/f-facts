@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 import '../../../core/style.dart';
 
 class FactsCard extends StatelessWidget {

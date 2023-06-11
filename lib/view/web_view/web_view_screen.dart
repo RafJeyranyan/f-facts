@@ -1,39 +1,57 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 import '../../cubits/web_view/web_view_cubit.dart';
 import '../../cubits/web_view/web_view_state.dart';
 
 class WebViewScreen extends StatelessWidget {
-   const WebViewScreen({Key? key,
-    required this.url
-  }) : super(key: key);
+  String url;
 
-  final String url;
+  WebViewScreen({Key? key, required this.url}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
-    return SafeArea(
-      child: Scaffold(
-        body: BlocProvider<WebViewCubit>(
-          create: (_)=> WebViewCubit(url: url),
-          child: BlocBuilder<WebViewCubit,WebViewState>(
-            builder: (context,state) {
-              return WillPopScope(
-                  onWillPop: () async{
-                    if(await state.controller.canGoBack()){
-                      state.controller.goBack();
-                      return false;
-                    }
-                    return false;
-                  },
-                  child: WebViewWidget(controller: state.controller));
-            },
+    return BlocProvider<WebViewCubit>(
+      create: (_) => WebViewCubit(url: url),
+      child: BlocBuilder<WebViewCubit, WebViewState>(builder: (context, state) {
+        final cubit = context.read<WebViewCubit>();
+        return SafeArea(
+          child: Scaffold(
+            body: WillPopScope(
+              onWillPop: cubit.onBackPressed,
+              child: Column(
+                children: [
+                  Expanded(
+                    child: Stack(children: [
+                      InAppWebView(
+                        initialUrlRequest:
+                            URLRequest(url: Uri.parse(state.url)),
+                        initialOptions: InAppWebViewGroupOptions(
+                          crossPlatform: InAppWebViewOptions(
+                            useShouldOverrideUrlLoading: true,
+                            javaScriptCanOpenWindowsAutomatically: true,
+                          ),
+                        ),
+                        onWebViewCreated: (controller) {
+                          cubit.setUpController(controller);
+                        },
+                        androidOnPermissionRequest:
+                            (InAppWebViewController controller, String origin,
+                                List<String> resources) async {
+                          return PermissionRequestResponse(
+                              resources: resources,
+                              action: PermissionRequestResponseAction.GRANT);
+                        },
+                      ),
+                    ]),
+                  ),
+                ],
+              ),
+            ),
           ),
-        ),
-      ),
+        );
+      }),
     );
   }
 }

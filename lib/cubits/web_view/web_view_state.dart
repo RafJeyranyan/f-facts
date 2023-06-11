@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+
 
 enum WebViewStage {
   loading,
@@ -11,23 +12,23 @@ class WebViewState extends Equatable {
 
   final String url;
 
-  final WebViewController controller;
+  final InAppWebViewController webViewController;
 
   const WebViewState(
-      {required this.stage, required this.url, required this.controller});
+      {required this.stage, required this.url,  required this.webViewController});
 
   WebViewState copyWith({
     WebViewStage? stage,
     String? url,
-    WebViewController? controller,
+    InAppWebViewController? webViewController,
   }) {
     return WebViewState(
       stage: stage ?? this.stage,
       url: url ?? this.url,
-      controller: controller ?? this.controller,
+      webViewController: webViewController ?? this.webViewController,
     );
   }
 
   @override
-  List<Object?> get props => [stage, url, controller];
+  List<Object?> get props => [stage, url, webViewController];
 }

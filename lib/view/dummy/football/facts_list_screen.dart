@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 import '../../../core/entities/entities.dart';
 import '../../../core/style.dart';
 

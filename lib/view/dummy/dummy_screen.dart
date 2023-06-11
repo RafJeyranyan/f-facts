@@ -4,9 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../core/style.dart';
 import '../../cubits/dummy/dummy_cubit.dart';
 import '../../cubits/dummy/dummy_state.dart';
-import 'football/single_fact_screen.dart';
 import 'football/fact_card.dart';
 import 'football/facts_list_screen.dart';
+import 'football/single_fact_screen.dart';
 
 class DummyScreen extends StatelessWidget {
   const DummyScreen({Key? key}) : super(key: key);

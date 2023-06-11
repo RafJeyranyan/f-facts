@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 import 'web_view_state.dart';
 
@@ -10,13 +10,15 @@ class WebViewCubit extends Cubit<WebViewState> {
       : super(WebViewState(
             stage: WebViewStage.loading,
             url: url,
-            controller: WebViewController())) {
-    setUpController();
+            webViewController: InAppWebViewController(0,InAppWebView()))) ;
+
+  Future<bool> onBackPressed() async {
+    state.webViewController.goBack();
+    return false;
   }
 
-  setUpController() {
-    state.controller.setJavaScriptMode(JavaScriptMode.unrestricted);
-    state.controller.loadRequest(Uri.parse(state.url));
+  setUpController(InAppWebViewController controller) {
+   emit(state.copyWith(webViewController: controller));
 
   }
 }

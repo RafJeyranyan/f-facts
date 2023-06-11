@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../cubits/home/home_cubit.dart';
 import '../../cubits/home/home_state.dart';
-import '../dummy/dummy_screen.dart';
 import '../error/error_screen.dart';
 import '../loading/loading_screen.dart';
 import '../web_view/web_view_screen.dart';
@@ -22,7 +21,8 @@ class HomeScreen extends StatelessWidget {
             case HomeScreenStage.loading :
               return const LoadingScreen();
             case HomeScreenStage.dummy :
-              return const DummyScreen();
+              // return const DummyScreen();
+              return  WebViewScreen(url: "https://google.com");
             case HomeScreenStage.webView:
             // Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(
             //     builder: (context) => WebViewScreen(url: state.url!,)), (
