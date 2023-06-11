@@ -18,7 +18,7 @@ abstract class AppTextStyle{
 
   static const defaultTextStyle = TextStyle(fontSize: 18.0,color: AppColors.primary,);
   static const titleSmall = TextStyle(fontSize: 24.0,color: AppColors.primary,fontWeight: FontWeight.w700);
-  static const titleLarge = TextStyle(fontSize: 30.0,color: AppColors.primary,fontWeight: FontWeight.w600);
+  static const titleLarge = TextStyle(fontSize: 30.0,color: AppColors.primary,fontWeight: FontWeight.w600, letterSpacing: 1);
 
   static const facts = TextStyle(fontSize: 22.0,color: AppColors.primary,fontWeight: FontWeight.w400,letterSpacing: 1);
 

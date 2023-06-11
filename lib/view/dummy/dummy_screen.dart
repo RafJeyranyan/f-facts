@@ -4,9 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../core/style.dart';
 import '../../cubits/dummy/dummy_cubit.dart';
 import '../../cubits/dummy/dummy_state.dart';
-import 'football/facts_screen.dart';
-import 'football/volcano_card.dart';
-import 'football/volcano_screen.dart';
+import 'football/single_fact_screen.dart';
+import 'football/fact_card.dart';
+import 'football/facts_list_screen.dart';
 
 class DummyScreen extends StatelessWidget {
   const DummyScreen({Key? key}) : super(key: key);
@@ -64,11 +64,11 @@ class DisplayDummyScreen extends StatelessWidget {
                         GestureDetector(
                           onTap: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => VolcanoScreen(
-                                      volcano: e,
+                                builder: (context) => FactsScreen(
+                                      footballFact: e,
                                     )));
                           },
-                          child: VolcanoCard(
+                          child: FactsCard(
                             title: e.title ?? "",
                             url: e.url ?? "",
                           ),

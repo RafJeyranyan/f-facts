@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 
 import '../../../core/style.dart';
 
-class VolcanoCard extends StatelessWidget {
+class FactsCard extends StatelessWidget {
   final String title;
   final String url;
 
-  const VolcanoCard({Key? key, required this.title, required this.url})
+  const FactsCard({Key? key, required this.title, required this.url})
       : super(key: key);
 
   @override

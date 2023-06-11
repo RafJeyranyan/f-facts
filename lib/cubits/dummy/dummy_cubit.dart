@@ -2,7 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 
 import '../../core/entities/entities.dart';
-import '../../view/dummy/football/volcanos.dart';
+import '../../view/dummy/football/facts_data.dart';
 import 'dummy_state.dart';
 
 class DummyScreenCubit extends Cubit<DummyScreenState> {
@@ -13,9 +13,9 @@ class DummyScreenCubit extends Cubit<DummyScreenState> {
   }
 
   load() async {
-    List<Volcano> volcanoesTmp = [];
+    List<FootballFact> volcanoesTmp = [];
     football_facts.forEach((element) {
-      volcanoesTmp.add(Volcano.fromJson(element));
+      volcanoesTmp.add(FootballFact.fromJson(element));
     });
     emit(state.copyWith(stage: DummyScreenStage.display,volcanoes: volcanoesTmp));
   }

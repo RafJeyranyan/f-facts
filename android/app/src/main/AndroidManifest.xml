@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="gets.bet.app.getsbet">
+    package="joy.victory.mobile">
    <application
         android:label="f_facts"
         android:name="${applicationName}"

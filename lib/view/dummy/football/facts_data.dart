@@ -28,7 +28,7 @@ final football_facts = const [
         '',
   },
   {
-    'title': 'The fastest goal',
+    'title': 'The Fastest Goal',
     'url': "assets/football/Nawaf.jpg",
     'facts': 'The records concerning the fastest goals are disputed for a number of reasons.\n\n'
         'In addition, many of the goals listed in the Guinness World Records as being '

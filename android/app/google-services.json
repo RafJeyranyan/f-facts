@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "574187779357",
-    "project_id": "gbrd-43a18",
-    "storage_bucket": "gbrd-43a18.appspot.com"
+    "project_number": "189923547119",
+    "project_id": "mcwrafdz",
+    "storage_bucket": "mcwrafdz.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:574187779357:android:0c6ee74d772f4784b0ddf4",
+        "mobilesdk_app_id": "1:189923547119:android:e956345d07a80a57ae881a",
         "android_client_info": {
-          "package_name": "gets.bet.app.getsbet"
+          "package_name": "joy.victory.mobile"
         }
       },
       "oauth_client": [
         {
-          "client_id": "574187779357-6eecmrggqt26hbnrspa3e7fou7ijria7.apps.googleusercontent.com",
+          "client_id": "189923547119-kdde3n66songbpdkbshc8dco5bkg4vet.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCweSbPkXm1m0KL98ROubXoBZnX1PJbCjE"
+          "current_key": "AIzaSyDLxoxaxCzT0i8DCtr3BV6mBrbl7t7I_rw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "574187779357-6eecmrggqt26hbnrspa3e7fou7ijria7.apps.googleusercontent.com",
+              "client_id": "189923547119-kdde3n66songbpdkbshc8dco5bkg4vet.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

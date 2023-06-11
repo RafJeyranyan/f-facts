@@ -3,16 +3,16 @@ import 'package:json_annotation/json_annotation.dart';
 part 'entities.g.dart';
 
 @JsonSerializable()
-class Volcano {
+class FootballFact {
   String? title;
   String? url;
   String? facts;
 
-  Volcano({this.title, this.url, this.facts});
+  FootballFact({this.title, this.url, this.facts});
 
-  factory Volcano.fromJson(Map<String, dynamic> json) =>
-      _$VolcanoFromJson(json);
+  factory FootballFact.fromJson(Map<String, dynamic> json) =>
+      _$FootballFactFromJson(json);
 
-  Map<String, dynamic> toJson() => _$VolcanoToJson(this);
+  Map<String, dynamic> toJson() => _$FootballFactToJson(this);
 
 }

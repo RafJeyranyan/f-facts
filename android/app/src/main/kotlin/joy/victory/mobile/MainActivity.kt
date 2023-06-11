@@ -1,4 +1,4 @@
-package gets.bet.app.getsbet
+package joy.victory.mobile
 
 import io.flutter.embedding.android.FlutterActivity
 

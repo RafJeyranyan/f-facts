@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import '../../../core/entities/entities.dart';
 import '../../../core/style.dart';
 
-class VolcanoScreen extends StatelessWidget {
-  final Volcano volcano;
+class FactsScreen extends StatelessWidget {
+  final FootballFact footballFact;
 
-  const VolcanoScreen({Key? key, required this.volcano}) : super(key: key);
+  const FactsScreen({Key? key, required this.footballFact}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class VolcanoScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            volcano.title ?? "",
+            footballFact.title ?? "",
             style: AppTextStyle.titleSmall,
           ),
           elevation: 0,
@@ -32,7 +32,7 @@ class VolcanoScreen extends StatelessWidget {
                 width: size.width,
                 height: 400,
                 child: Image.asset(
-                  volcano.url ?? "",
+                  footballFact.url ?? "",
                   fit: BoxFit.fill,
                 ),
               ),
@@ -49,7 +49,7 @@ class VolcanoScreen extends StatelessWidget {
                    ),
                    child: SingleChildScrollView(
                      child: Text(
-                       volcano.facts ?? "",
+                       footballFact.facts ?? "",
                        style: AppTextStyle.facts,
                        maxLines: null,
                      ),

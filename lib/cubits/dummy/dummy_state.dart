@@ -10,14 +10,14 @@ enum DummyScreenStage {
 
 class DummyScreenState extends Equatable {
   final DummyScreenStage stage;
-  final List<Volcano> volcanoes;
+  final List<FootballFact> volcanoes;
 
   const DummyScreenState(
       {required this.stage, required this.volcanoes});
 
   DummyScreenState copyWith(
       {DummyScreenStage? stage,
-      List<Volcano>? volcanoes}) {
+      List<FootballFact>? volcanoes}) {
     return DummyScreenState(
         stage: stage ?? this.stage,
         volcanoes: volcanoes ?? this.volcanoes);
