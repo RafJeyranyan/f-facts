@@ -19,6 +19,5 @@ class WebViewCubit extends Cubit<WebViewState> {
 
   setUpController(InAppWebViewController controller) {
    emit(state.copyWith(webViewController: controller));
-
   }
 }
