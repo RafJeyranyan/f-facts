@@ -6,7 +6,7 @@ import '../../cubits/web_view/web_view_cubit.dart';
 import '../../cubits/web_view/web_view_state.dart';
 
 class WebViewScreen extends StatelessWidget {
-  String url;
+  final String url;
 
   WebViewScreen({Key? key, required this.url}) : super(key: key);
 
